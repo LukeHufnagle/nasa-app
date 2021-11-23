@@ -1,38 +1,257 @@
-.App {
+/* CSS RESET */
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Space Mono', monospace;
+}
+#background{
+  width: 100%;
+  height: 751px;
+}
+
+/* DASHBOARD PAGE STYLING */
+#dashboardTitle{
+  color: whitesmoke;
+  background-color: #FF5A5A;
+  border: 2px solid whitesmoke;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#dashboardTitle2{
+  color: #FF5A5A;
+  background-color: whitesmoke;
+  border: 2px solid #FF5A5A;
+  text-align: center;
+  width: 800px;
+  margin-left: 380px;
+  margin-right: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#links{
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+#picOfDayCard{
+  border: 5px solid #FF5A5A;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: black;
+}
+#picOfDayCard:hover{
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  transition: 0.5s all ease-in-out;
+}
+
+#cardPic{
+  width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+#cardDesc{
+  color: #FF5A5A;
+  font-size: 12px;
+}
+
+#cardbtn1{
+  margin-top: 40px;
+}
+
+
+#cardbtn3{
+  margin-top: 50px;
+}
+
+#cardbtn4{
+  margin-top: 33px;
+}
+
+.btn{
+  color: #FF5A5A;
+  background-color: whitesmoke;
+}
+
+.btn:hover{
+  color: whitesmoke;
+  background-color: #FF5A5A;
+  transition: 0.5s all ease-in-out;
+}
+
+#weatherReport{
+  padding: 5px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 145px;
+  margin-top: 50px;
+  border: 1px solid #FF5A5A;
+  width: 1250px;
 }
 
-.App-link {
-  color: #61dafb;
+#weatherCap{
+  color: #FF5A5A;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#weatherInfo{
+  color: whitesmoke;
+}
+
+
+/* PIC OF DAY PAGE STYLING */
+#picOfDayTitle{
+  color: whitesmoke;
+  text-align: center;
+  border: 2px solid #FF5A5A;
+  padding: 5px;
+  background-color: #FF5A5A;
+}
+
+#container{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#picDiv{
+  padding: 5px;
+  border: 2px solid #FF5A5A;
+}
+
+#picTitle{
+  color: #FF5A5A;
+}
+
+#picDate{
+  color: #FF5A5A;
+}
+
+#picExpl{
+  color: whitesmoke;
+}
+
+
+
+/* NASA IMAGE ARCHIVE PAGE STYLING */
+#nasaImageBackground{
+  width: 100%;
+  height: 3900px
+}
+
+#title{
+  color: whitesmoke;
+  background-color: #FF5A5A;
+  border: 1px solid whitesmoke;
+  text-align: center;
+}
+
+#form{
+  color: whitesmoke;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  margin-left: 600px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+#formInput{
+  background-color: #FF5A5A;
+  border-color: whitesmoke;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#formbtn{
+  margin-top: 2px;
+}
+
+#btn{
+  position: absolute;
+  right: 0;
+}
+
+#btn2{
+  position: absolute;
+  left: 0;
+}
+
+/* .nasaImageContainer{
+  display: flex;
+  display: inline-block;
+} */
+
+/* #gridContainer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+
+} */
+
+
+.gridContainer{
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+#nasaImage{
+  border: 1px solid #FF5A5A;
+}
+
+/* ISS LOCATER PAGE STYLING */
+#issTitle{
+  color: whitesmoke;
+  text-align: center;
+  border: 2px solid #FF5A5A;
+  padding: 5px;
+  background-color: #FF5A5A;
+}
+
+#issInfo{
+  border: 2px solid #FF5A5A;
+  color: whitesmoke;
+}
+
+#issForm{
+  color: ghostwhite;
+}
+
+#issInput{
+  background-color: #FF5A5A;
+}
+
+#issFormResult{
+  color: whitesmoke;
+  border: 2px solid #FF5A5A;
+}
+
+
+/* SPACE FACT STYLING */
+#factInfo{
+  color: #FF5A5A;
+  border: 5px solid whitesmoke;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.factForm{
+  width: 500px;
+  margin-left: 35%;
+}
+
+#factLabel{
+  color: #FF5A5A;
+}
+
+#factInput{
+  background-color: whitesmoke;
+  color: #FF5A5A;
+  border: 1px solid #FF5A5A;
 }
