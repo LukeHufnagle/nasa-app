@@ -255,3 +255,15 @@
   color: #FF5A5A;
   border: 1px solid #FF5A5A;
 }
+
+#factHomeBtn{
+  margin-left: 5px;
+}
+
+#factDeleteBtn{
+  margin-bottom: 3px;
+}
+
+#factEditBtn{
+  border: 1px solid #FF5A5A;
+}

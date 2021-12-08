@@ -7,6 +7,7 @@ import NASAimages from './components/NASAimages';
 import ISSlocater from './components/ISSlocater';
 import SpaceFacts from './components/SpaceFacts';
 import SpaceFactForm from './components/SpaceFactForm';
+import EditFactForm from './components/EditFactForm';
 import background from "./images/double-bubble-dark.png"
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 
           <Route exact path="/spaceFactForm">
             <SpaceFactForm></SpaceFactForm>
+          </Route>
+
+          <Route exact path="/editFactForm/:id">
+            <EditFactForm></EditFactForm>
           </Route>
 
         </Switch>

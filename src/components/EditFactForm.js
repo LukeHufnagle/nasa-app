@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
 
-const SpaceFactForm = () => {
+const EditFactForm = () => {
     const history = useHistory()
 
     const [formInfo, setFormInfo] = useState({
@@ -11,10 +11,9 @@ const SpaceFactForm = () => {
         fact: ""
     })
 
-    const [formErrors, setFormErrors] = useState({
-        name: "",
-        fact: ""
-    })
+    useEffect(()=>{
+        axios.get()
+    },[])
 
     const changeHandler = (e)=>{
         console.log("CHANGE")
@@ -26,19 +25,7 @@ const SpaceFactForm = () => {
     
     const submitHandler = (e)=>{
         e.preventDefault();
-        console.log("SUBMIT")
-        axios.post("http://localhost:8000/api/newFact", formInfo)
-            .then(response=>{
-                console.log("FORM RESPONSE", response)
-                // history.push("/spaceFacts")
-
-                if(response.data.err){
-                    setFormErrors(response.data.err.errors)
-                }else{
-                    history.push("/spaceFacts")
-                }
-            })
-            .catch(err=>console.log("err",err))
+        // axios.put("http://localhost:8000")
     }
 
     return (
@@ -50,12 +37,10 @@ const SpaceFactForm = () => {
                     <div className="form-group">
                         <label id="factLabel">Name: </label>
                         <input onChange={changeHandler} id="factInput" type="text" name="name" className="form-control"></input>
-                        <p className="text-danger">{formErrors.name?.message}</p>
                     </div>
                     <div className="form-group">
                         <label id="factLabel">Fact: </label>
                         <input onChange={changeHandler} id="factInput" type="text" name="fact" className="form-control"></input>
-                        <p className="text-danger">{formErrors.fact?.message}</p>
                     </div>
                     <input className="btn btn mt-3" type="submit" value="Post your fact!"></input>
                 </form>
@@ -64,4 +49,4 @@ const SpaceFactForm = () => {
     );
 };
 
-export default SpaceFactForm;
+export default EditFactForm;
